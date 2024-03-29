@@ -10,8 +10,8 @@ export const AddPostForm = () => {
 
   const dispatch = useDispatch()
 
-  const onTitleChanged = (e) => e.target.value
-  const onContentChanged = (e) => e.target.value
+  const onTitleChanged = (e) => setTitle(e.target.value)
+  const onContentChanged = (e) => setContent(e.target.value)
 
   const onSavePostClicked = () => {
     if (title && content) {
@@ -44,7 +44,7 @@ export const AddPostForm = () => {
           value={content}
           onChange={onContentChanged}
         />
-        <button type="buton" onClick={onSavePostClicked}>
+        <button type="button" onClick={onSavePostClicked}>
           Save Post
         </button>
       </form>
